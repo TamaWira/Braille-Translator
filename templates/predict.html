@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="container">
+    <h2>Braille Translator</h2>
+
+    <form id="mainForm" method="POST" enctype="multipart/form-data">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger('click')">
+            <span id="buttonText">Select Image</span>
+        </button>
+
+        <div class="submit-area">
+            <input id="uploadedFile" name="file" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*">
+            <div class="drag-text">
+                <h3>Drag and drop a file or click Select Image button</h3>
+            </div>
+        </div>
+        
+        <div class="file-upload-content">
+            <div class="file-upload-wrapper">
+                <img src="#" alt="uploaded image" class="file-upload-image">
+            </div>
+        </div>
+
+        <button type="submit" id="submitBtn" onclick="this.classList.toggle('button--loading')">
+            <span class="button__text">Predict</span>
+        </button>
+    </form>
+</div>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('.submit-area').hide();
+
+                $('.file-upload-image').attr('src', e.target.result);
+                $('.file-upload-content').show();
+
+                $('.image-title').html(input.files[0].name);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        } else {
+            removeUpload();
+        }
+    }
+
+    $('.submit-area').bind('dragover', function () {
+        $('.submit-area').addClass('image-dropping');
+    });
+    
+    $('.submit-area').bind('dragleave', function () {
+        $('.submit-area').removeClass('image-dropping');
+    });
+</script>
+{% endblock %}

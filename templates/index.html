@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="landing-page">
+    <div class="text">
+        <h1 class="title">Braille Translator</h1>
+        <p>This is a Website that can translate <span class="braille-chars">Braille Characters</span> into <span class="latin-chars">Latin Alphabet</span>.</p>
+        <!-- <p>This is a Website that can translate Braille Characters into Latin Alphabet.</p> -->
+        <form action="{{ url_for('predict') }}">
+            <button type="submit">Check it out!</button>
+        </form>
+    </div>
+    <div class="image">
+        <img src="{{ url_for('static', filename= 'img/landing art.svg') }}" alt="Landing Art">
+    </div>
+</div>
+<div id="content">
+    <article>
+        <h2>Apa itu Huruf Braille?</h2>
+        <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
+        <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
+    </article>
+    <article>
+        <h2>Apa itu Huruf Braille?</h2>
+        <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
+        <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
+    </article>
+    <article>
+        <h2>Apa itu Huruf Braille?</h2>
+        <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
+        <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
+    </article>
+</div>
+{% endblock %}

@@ -1,0 +1,156 @@
+.landing-page {
+    padding-inline: 5rem;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .image {
+    display: flex;
+    flex: 1.25;
+}
+
+.landing-page .image img {
+    width: 80%;
+    margin-inline: auto;
+}
+
+.landing-page .text {
+    flex: 0.75;
+}
+
+.landing-page .text .title {
+    font-family: "Merriweather";
+    font-weight: 900;
+    font-size: 3rem;
+    color: #61876E;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page .text p {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.text span {
+    font-weight: 500;
+    color: #61876E;
+}
+
+.landing-page .text form button {
+    text-decoration: none;
+    margin-block-start: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem;
+
+    border-radius: 999px;
+    color: white;
+    border: 1px solid #A6BB8D;
+    background-color: #A6BB8D;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.landing-page .text form button:hover {
+    color: #A6BB8D;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .landing-page {
+        flex-direction: column-reverse;
+    }
+
+    .landing-page .image {
+        flex: .75;
+    }
+
+    .landing-page .image img {
+        width: 25rem;
+    }
+    
+    .landing-page .text {
+        text-align: center;
+    }
+    
+    header .nav-container {
+        flex-direction: column;
+        margin-block-end: 1rem;
+    }
+
+    header .nav-container .items ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+}
+ 
+ /* =========================================== */
+ 
+ /* ----------------- CONTENT ----------------- */
+ 
+ #content {
+     display: flex;
+     background-color: rgb(166, 187, 141);
+     gap: 2rem 1rem;
+     justify-content: center;
+     padding: 4rem;
+ }
+ 
+ #content article, #content aside {
+     border-radius: 5px;
+     background-color: white;
+ }
+ 
+ #content article h2,
+ #content aside h2 {
+     font-family: "Merriweather";
+     font-weight: 900;
+     font-size: 2rem;
+     color: #61876E;
+ }
+ 
+ #content article h2,
+ #content article p,
+ #content aside h2 {
+     padding: 0;
+     margin: 0;
+ }
+ 
+ #content article {
+     width: 100%;
+     flex-wrap: wrap;
+     padding: 1rem;
+     flex: 1.5;
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ #content article img {
+     width: 100%;
+     margin-inline: auto;
+ }
+ 
+ #content article p {
+     font-family: "Montserrat";
+     text-align: justify;
+ }
+ 
+ @media screen and (max-width: 768px) {
+     #content {
+         flex-direction: column;
+     }
+ 
+     #content article img {
+         width: 70%;
+     }
+ }
+ 
+ /* =========================================== */

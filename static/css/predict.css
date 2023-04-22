@@ -1,0 +1,141 @@
+h2 {
+    font-size: 2.3rem;
+    color: #61876E;
+    font-family: Merriweather;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 1.5rem;
+    padding-inline: 4rem;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10rem;
+    padding-block: 1rem;
+}
+
+/* Upload Button */
+
+.container form .file-upload-btn,
+.container form .custom-file-submit,
+.container form #submitBtn {
+    padding: .5rem 1.3rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    background-color: rgb(166, 187, 141);
+    border: 3px solid rgb(119, 144, 88);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.container form button:hover {
+    background-color: rgb(142, 172, 105);
+    cursor: pointer;
+}
+
+/* Upload Area */
+
+.container form .submit-area,
+.container form .file-upload-content .file-upload-wrapper {
+    height: 300px;
+    border-radius: 5px;
+    margin-block: .5rem;
+    border: 3px dashed rgb(119, 144, 88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.container form .submit-area {
+    position: relative;
+    transition: all .1s ease-in-out;
+}
+
+.container form .submit-area:hover,
+.image-dropping {
+    background-color: rgb(166, 187, 141);
+}
+
+
+/* Uploaded Content */
+
+.container form .file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.container form .file-upload-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.container form .submit-area .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.button__text {
+    margin: .3 0;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.container form #submitBtn {
+    background-color: rgb(178, 190, 99);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form #submitBtn:hover {
+    background-color: rgb(142, 172, 105);
+    cursor: pointer;
+}
+
+
+/* Progress Bar */
+
+.button--loading .button__text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 4px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

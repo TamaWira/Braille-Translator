@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="result-container">
+    <div class="result-title">
+        <h2>Braille Translator</h2>
+    </div>
+    <div class="result-content">
+        <div class="result-images">
+            <div id="input-image" class="box-container">
+                <p>Input Image</p>
+                <div class="box">
+                    <img src="{{ url_for('static', filename= 'serving/original_image.jpg') }}" alt="Input Image">
+                </div>
+            </div>
+            <div id="converted-image" class="box-container">
+                <p>Converted Image</p>
+                <div class="box">
+                    <img src="{{ url_for('static', filename= 'serving/converted_image.jpg') }}" alt="Cropped Characters">
+                </div>
+            </div>
+            <div id="cropped-chars" class="box-container">
+                <p>Cropped Characters</p>
+                <div class="box">
+                    <img src="{{ url_for('static', filename= 'serving/cropped_image.png') }}" alt="Cropped Characters">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="result-text" class="box-container">
+            <p>Result</p>
+            <h3>{{ predicted_result }}</h3>
+        </div>
+    </div>
+    <div class="predict-another">
+        <a class="predict-button" href="{{ url_for('predict') }}">Predict Another</a>
+    </div>
+</div>
+{% endblock %}
