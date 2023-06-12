@@ -1,4 +1,8 @@
 /* ---------- MAIN ---------- */
+hr {
+    max-width: 90%;
+}
+
 .result-container {
     display: flex;
     flex-direction: column;
@@ -35,10 +39,6 @@
     width: 100%;
 }
 
-.result-images, #result-text {
-    width: 100%;
-    padding: 1rem;
-}
 
 .box img {
     max-width: 100%;
@@ -64,11 +64,24 @@
     margin: auto;
 }
 
-#result-text h3 {
-    margin: 0;
+.result-images, #result-text {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+.predicted-result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 1rem;
     background-color: #A6BB8D;
     border-radius: 5px;
+    overflow: auto;
+}
+
+#result-text h3 {
+    margin: 0;
 }
 
 .predict-button {
@@ -104,3 +117,9 @@
     background-size: cover;
     transition: transform .5s ease-out;
   }
+
+@media screen and (max-width: 768px) {
+    .result-images {
+        flex-direction: column;
+    }
+}

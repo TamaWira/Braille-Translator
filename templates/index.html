@@ -4,10 +4,9 @@
 <div class="landing-page">
     <div class="text">
         <h1 class="title">Braille Translator</h1>
-        <p>This is a Website that can translate <span class="braille-chars">Braille Characters</span> into <span class="latin-chars">Latin Alphabet</span>.</p>
-        <!-- <p>This is a Website that can translate Braille Characters into Latin Alphabet.</p> -->
+        <p>Website ini mampu mengenali <span class="braille-chars">Karakter Braille</span> dalam sebuah dokumen menjadi <span class="latin-chars">Karakter Alfabet</span>.</p>
         <form action="{{ url_for('predict') }}">
-            <button type="submit">Check it out!</button>
+            <button type="submit">Coba Sekarang!</button>
         </form>
     </div>
     <div class="image">
@@ -15,20 +14,26 @@
     </div>
 </div>
 <div id="content">
-    <article>
-        <h2>Apa itu Huruf Braille?</h2>
+    <article id="braille-definition">
+        <h2>Mari Berkenalan dengan Huruf Braille</h2>
         <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
         <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
     </article>
-    <article>
-        <h2>Apa itu Huruf Braille?</h2>
-        <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
-        <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
+    <article id="louise-braille">
+        <div class="title">
+            <h2>Louis Braille, Penemu Huruf Braille</h2>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename= 'img/louise_braille.png') }}" alt="Braille">
+        </div>
+        <div class="text">
+            <p>Louis Braille lahir pada 4 Januari 1809 di Coupvray, di Seine-et-Marne, sekitar empat puluh kilometer sebelah timur Paris. Sebuah kecelakaan tragis pada usia tiga tahun di toko sadel ayahnya menyebabkan Louis menjadi buta. Pada usia yang sangat muda, antara usia 12 dan 16, Louis Braille mulai menyesuaikan dan menyempurnakan sistem Barbier de la Serre.</p>
+        </div>
     </article>
-    <article>
-        <h2>Apa itu Huruf Braille?</h2>
-        <img src="{{ url_for('static', filename= 'img/braille.jpeg') }}" alt="Braille">
-        <p>Huruf Braille adalah sejenis sistem tulisan sentuh yang digunakan oleh tunanetra. Sistem ini diciptakan oleh orang Prancis bernama Louis Braille yang mengalami buta saat berusia 5 tahun. Saat berusia 15, Braille membuat tulisan untuk memudahkan tentara membaca dalam gelap.</p>
+    <article id="kegunaan-braille">
+        <h2>Kapan Huruf Braille Digunakan?</h2>
+        <img src="{{ url_for('static', filename= 'img/braille_usage.jpg') }}" alt="Braille">
+        <p>Meskipun saat ini Huruf Braille sudah mulai ditinggalkan karena perkembangan teknologi, Huruf Braille masih diajarkan di Sekolah Inklusif di berbagai tingkat pendidikan.</p>
     </article>
 </div>
 {% endblock %}

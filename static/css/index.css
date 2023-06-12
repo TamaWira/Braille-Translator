@@ -65,6 +65,8 @@
 @media screen and (max-width: 768px) {
     .landing-page {
         flex-direction: column-reverse;
+        padding-inline: 0;
+        padding: 1rem;
     }
 
     .landing-page .image {
@@ -72,19 +74,19 @@
     }
 
     .landing-page .image img {
-        width: 25rem;
+        width: 100%;
     }
     
     .landing-page .text {
         text-align: center;
     }
     
-    header .nav-container {
+    .nav-container {
         flex-direction: column;
         margin-block-end: 1rem;
     }
 
-    header .nav-container .items ul {
+    .nav-container .items ul {
         flex-wrap: wrap;
         column-gap: .5rem;
     }
@@ -137,6 +139,12 @@
      width: 100%;
      margin-inline: auto;
  }
+
+ #content article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
  
  #content article p {
      font-family: "Montserrat";
@@ -146,10 +154,7 @@
  @media screen and (max-width: 768px) {
      #content {
          flex-direction: column;
-     }
- 
-     #content article img {
-         width: 70%;
+         padding: 1rem;
      }
  }
  

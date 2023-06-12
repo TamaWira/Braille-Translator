@@ -24,7 +24,6 @@ h2 {
 /* Upload Button */
 
 .container form .file-upload-btn,
-.container form .custom-file-submit,
 .container form #submitBtn {
     padding: .5rem 1.3rem;
     font-family: "Montserrat";
@@ -137,5 +136,25 @@ h2 {
 
     to {
         transform: rotate(1turn);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .container form {
+        padding-inline: 0;
+    }
+
+    .container form .file-upload-btn,
+    .container form #submitBtn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .drag-text {
+        align-content: center;
     }
 }

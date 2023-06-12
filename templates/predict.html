@@ -7,13 +7,13 @@
 
     <form id="mainForm" method="POST" enctype="multipart/form-data">
         <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger('click')">
-            <span id="buttonText">Select Image</span>
+            <span id="buttonText">Pilih Gambar</span>
         </button>
 
         <div class="submit-area">
             <input id="uploadedFile" name="file" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*">
             <div class="drag-text">
-                <h3>Drag and drop a file or click Select Image button</h3>
+                <h3>Drag and drop dokumen atau tekan tombol "Pilih Gambar"</h3>
             </div>
         </div>
         
@@ -24,7 +24,7 @@
         </div>
 
         <button type="submit" id="submitBtn" onclick="this.classList.toggle('button--loading')">
-            <span class="button__text">Predict</span>
+            <span class="button__text">Kenali</span>
         </button>
     </form>
 </div>

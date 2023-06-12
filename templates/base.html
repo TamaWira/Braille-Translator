@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
@@ -11,46 +14,6 @@
     <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"
     integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"
     crossorigin="anonymous"></script>
-
-    <!-- <script type="text/javascript">
-        window.onload = function() {
-            const socket = io();
-            socket.connect("https://localhost:3001");
-    
-            let progressBar = document.getElementById("progressBar");
-            let btn = document.getElementById("submitImage");
-            let submitBtn = document.getElementById("submitBtn")
-            
-            socket.on("connect", function() {
-                console.log("Connected");
-            })
-            
-            socket.on("update progress", function(percent) {
-                console.log("Get percent: " + percent);
-                progressBar.style.width = percent + "%";
-                
-                submitBtn.disabled = true;
-                submitBtn.style.backgroundColor = "gray";
-                submitBtn.style.border = "none";
-                submitBtn.style.cursor = "not-allowed";   
-            })
-            
-            let data = new FormData()
-            let uploadedImage = document.getElementById("uploadedFile");
-            data.append(uploadedImage.value)
-            
-            let mainForm = document.getElementById("mainForm");
-            mainForm.onsubmit = function(e) {
-                event.preventDefault();
-                fetch("/predict", {
-                    method: "POST",
-                    body: "Testing this is a data"
-                }).then(response => {
-                    window.location = response.url
-                })
-            }
-        }
-    </script> -->
 </head>
 <body>
     <header>
@@ -64,8 +27,8 @@
 
             <div class="nav-items">
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="{{ url_for('predict') }}" class="predict">Predict!</a></li>
+                    <!-- <li><a href="#">About Us</a></li> -->
+                    <li><a href="{{ url_for('predict') }}" class="predict">Kenali!</a></li>
                 </ul>
             </div>
         </div>
